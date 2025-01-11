@@ -1,0 +1,259 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: solid 1px red;
+    background-color: red;
+    height: 50px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu span {
+    margin: 0 13px;
+    cursor: pointer;
+    color: white;
+}
+
+.menu-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    color: white;
+}
+
+.menu-right span {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.but1 {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.but2 {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* Slider container */
+.slider {
+    position: relative;
+    width:100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 61px;
+  }
+  
+  /* Slide images */
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .slide img {
+    width: 100%;
+    display: block;
+  }
+  
+  /* Dots */
+.dots {
+    position: absolute;
+    bottom: 15px; /* Adjust the distance from the bottom of the slider */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px; /* Spacing between dots */
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 1px rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: rgb(255, 255, 255);
+  }
+
+
+
+
+
+
+
+  .obtions {
+    width:100%;
+    height: 50px;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 15px;
+  }
+
+  .holder {
+    display: inline;
+    position: center;
+    width: 600px;
+    height: 50px;
+    border: solid 0px ;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 15px;
+  }
+
+  .filmebi{
+     width: 582px;
+     height: 40px;
+     background-color: white;
+     border-radius: 10px;
+     border: solid 1px rgba(0, 0, 0, 0.219);
+     margin-right: 16px;
+     font-weight: bold;
+     font-size: large;
+  }
+
+  .seansebi{
+    width: 582px;
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px rgba(0, 0, 0, 0.219);
+    margin-left: 16px;
+    font-weight: bold;
+    font-size: large;
+
+ }
+
+
+
+
+
+
+ .archevani {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left; /* Centers the items horizontally */
+    margin-top: 20px; /* Add some space between the buttons and the archevani container */
+    width: 1200px;
+    margin-left: 135px;
+}
+
+ .type1{
+    border: solid 0px;
+    width: 390px;
+    height: 300px;
+    background-color: rgb(232, 230, 230);
+    margin: 5px;
+ }
+
+ .type2{
+    border: solid 0px;
+    width: 190px;
+    height: 310px;
+    background-color: rgb(232, 230, 230);
+    margin: 5px;
+ }
+
+
+
+
+
+
+ 
+ hr{
+    width: 1150px;
+    color: rgba(232, 230, 230, 0.522);
+ }
+
+
+
+ 
+
+
+ .male{
+    width:1200px;
+    height: 70px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 15px;
+    background-color: rgba(213, 213, 213, 0.522);
+    border-radius: 5px;
+ }
+
+ h2{
+    margin-bottom: 4px;
+    margin-left: 20px;
+    font-weight: 100;
+ }
+
+
+
+
+
+ .archevani2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left; /* Centers the items horizontally */
+    margin-top: 7px; /* Add some space between the buttons and the archevani container */
+    width: 1200px;
+    margin-left: 135px;
+}
+
+
+.a{
+   width: 370px;
+   height: 220px;
+   margin: 10px;
+}
+
+.b{
+    width: 170px;
+    height: 230px;
+    margin: 10px;
+ }
+
+ .c{
+    width: 170px;
+    height: 250px;
+    margin: 10px;
+ }
+
+ h3{
+    margin-left: 12px;
+    padding-bottom: 20px;
+    font-weight: 200;
+ }
