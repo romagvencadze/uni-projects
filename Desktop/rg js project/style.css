@@ -342,3 +342,7 @@ html, body {
    color: white;
    font-size: 200;
 }
+
+a{
+   text-decoration: none;
+}
