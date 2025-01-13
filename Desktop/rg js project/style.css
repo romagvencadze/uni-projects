@@ -158,6 +158,16 @@ html, body {
 
  }
 
+ .filmebi.active, .seansebi.active {
+   background-color: red;
+   color: white;
+}
+
+.filmebi.inactive, .seansebi.inactive {
+   background-color: white;
+   color: black;
+}
+
 
 
 
@@ -276,6 +286,8 @@ html, body {
    align-items: center;
    justify-content: center;
 }
+
+
 
 /* Menu Section */
 .menu1 {

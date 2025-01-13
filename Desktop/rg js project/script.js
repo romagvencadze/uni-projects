@@ -59,47 +59,46 @@ setInterval(() => {
 
 
 
-// Select the buttons and the content sections
+// Select buttons and content sections
 const filmebiButton = document.querySelector('.filmebi');
 const seansebiButton = document.querySelector('.seansebi');
-const filmebiContent = document.createElement('div');
-const seansebiContent = document.createElement('div');
+const filmebiContent = document.querySelector('.filmebi-content');
+const seansebiContent = document.querySelector('.seansebi-content');
 
-// Initialize content for each section
-filmebiContent.innerHTML = '<p>Content for ფილმები (Movies)</p>';
-seansebiContent.innerHTML = '<p>Content for სეანსები (Sessions)</p>';
-
-// Style the content sections
-filmebiContent.style.display = 'none';
-seansebiContent.style.display = 'none';
-document.body.appendChild(filmebiContent);
-document.body.appendChild(seansebiContent);
-
-// Function to reset button styles
+// Function to reset button styles and hide content
 function resetButtonStyles() {
-    filmebiButton.style.backgroundColor = 'white';
-    filmebiButton.style.color = 'black';
-    seansebiButton.style.backgroundColor = 'white';
-    seansebiButton.style.color = 'black';
+    // Reset button styles
+    filmebiButton.classList.remove('active');
+    filmebiButton.classList.add('inactive');
+    seansebiButton.classList.remove('active');
+    seansebiButton.classList.add('inactive');
+
+    // Hide both content sections
     filmebiContent.style.display = 'none';
     seansebiContent.style.display = 'none';
 }
 
-// Event listeners for the buttons
-filmebiButton.addEventListener('click', () => {
+// Function to show "ფილმები" content
+function showFilmebiContent() {
     resetButtonStyles();
-    filmebiButton.style.backgroundColor = 'red';
-    filmebiButton.style.color = 'white';
+    filmebiButton.classList.add('active');
+    filmebiButton.classList.remove('inactive');
     filmebiContent.style.display = 'block';
-});
+}
 
-seansebiButton.addEventListener('click', () => {
+// Function to show "სეანსები" content
+function showSeansebiContent() {
     resetButtonStyles();
-    seansebiButton.style.backgroundColor = 'red';
-    seansebiButton.style.color = 'white';
+    seansebiButton.classList.add('active');
+    seansebiButton.classList.remove('inactive');
     seansebiContent.style.display = 'block';
+}
+
+// Event listeners for buttons
+filmebiButton.addEventListener('click', showFilmebiContent);
+seansebiButton.addEventListener('click', showSeansebiContent);
+
+// Set default selected button and page on load
+document.addEventListener('DOMContentLoaded', () => {
+    showFilmebiContent(); // "ფილმები" content is shown by default
 });
-
-// Set the default selected button
-filmebiButton.click();
-
