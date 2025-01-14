@@ -102,3 +102,5 @@ seansebiButton.addEventListener('click', showSeansebiContent);
 document.addEventListener('DOMContentLoaded', () => {
     showFilmebiContent(); // "ფილმები" content is shown by default
 });
+
+

@@ -212,7 +212,7 @@ html, body {
  .little_red_cont {
    display: flex;
    position: absolute;  /* Absolute positioning to place it on top of the .type2 */
-   bottom: 10px;  /* Aligns the red boxes to the bottom of the container */
+   bottom: 8px;  /* Aligns the red boxes to the bottom of the container */
    left: 10px; /* Adjust this to change the left offset */
 }
 
@@ -229,9 +229,20 @@ html, body {
 }
 
 .saxeli{
-   font-size: large;
    margin-left: 12px;
+   white-space: nowrap;  /* Prevents text from wrapping to the next line */
+   overflow: hidden;     /* Hides overflowing content */
+   text-overflow: ellipsis; /* Adds ellipsis (…) to truncated content */
+   width: 88%;          /* Ensures the width respects the container size */
+   display: block;       /* Makes sure the element behaves like a block-level element */
+   font-size: 18px;      /* Optional: Adjust font size as needed */
+   line-height: 1.2;          /* Adjust line height to make text tighter */
+   position: relative;      /* Enable fine-tuned positioning */
+   top: -5px;               /* Move the text up by 5px (adjust as needed) */
+   color: black;
 }
+
+
 
 
 
@@ -323,14 +334,6 @@ html, body {
 
 
 
-/* Menu Section */
-.menu1 {
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
-   margin-bottom: 20px;
-}
-
 .menu1 span {
    margin: 0 20px;
    cursor: pointer;
@@ -339,6 +342,20 @@ html, body {
    text-transform: uppercase;
    letter-spacing: 1px;
    color: white;
+   position: relative; /* Needed for the pseudo-element */
+   padding-bottom: 5px; /* Space for the line effect */
+}
+
+.menu1 span:hover::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 2px; /* Thickness of the line */
+   background-color: white;
+   transition: width 0.3s ease; /* Optional smooth animation */
+   width: 100%; /* Line covers the full width */
 }
 
 /* Social Media Section */
@@ -347,7 +364,7 @@ html, body {
    justify-content: center;
    gap: 20px;
    margin-bottom: 30px;
-   margin-top: 10px;
+   margin-top: 20px;
 }
 
 .social-networks a {
@@ -392,3 +409,5 @@ html, body {
 a{
    text-decoration: none;
 }
+
+
