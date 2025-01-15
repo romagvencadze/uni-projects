@@ -246,6 +246,76 @@ html, body {
 
 
 
+.overlay {
+   position: absolute;
+   width: 370px;
+   height: 220px;
+   margin: 10px;
+   background-color: rgba(0, 0, 0, 0.74); /* Semi-transparent black */
+   display: none; /* Initially hidden */
+   justify-content: center;
+   align-items: center;
+   z-index: 1; /* Ensure it's above the image */
+   flex-direction: column; /* Stack buttons vertically */
+}
+
+.overlay1    {
+   position: absolute;
+   width: 170px;
+   height: 230px;
+   margin: 10px;
+   background-color: rgba(0, 0, 0, 0.74); /* Semi-transparent black */
+   display: none; /* Initially hidden */
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   z-index: 1; /* Ensure it's above images */
+   flex-direction: column; /* Stack buttons vertically */
+}
+
+.overlay2    {
+   position: absolute;
+   width: 170px;
+   height: 250px;
+   margin: 10px;
+   background-color: rgba(0, 0, 0, 0.74);
+   display: none; 
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   z-index: 1; 
+   flex-direction: column; /* Stack buttons vertically */
+}
+.overlay.active , .overlay1.active , .overlay2.active  {
+   display: flex; /* Show overlay when active */
+}
+
+.overlay button , .overlay1 button , .overlay2 button  {
+   width: 80%;
+   height: 50px;
+   background-color: #000; /* Black background for buttons */
+   border: 2px solid #ffffff54; /* White border */
+   border-radius: 10px;
+   color: #ff0000; /* White text */
+   font-size: 18px;
+   font-weight: bold;
+   text-align: center;
+   cursor: pointer;
+   margin: 10px 0; /* Space between buttons */
+   transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.overlay button:hover , .overlay1 button:hover , .overlay2 button:hover {
+   border-color: red; /* Turn border red on hover */
+}
+
+
+
+
+
+
+
+
 
 
  

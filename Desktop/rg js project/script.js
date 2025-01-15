@@ -104,3 +104,82 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const images = document.querySelectorAll('.a, .b, .c');
+  let overlayUsageCount = 0; // Counter to track overlay usage
+  const maxOverlayUsage1 = 7; // Maximum times the first overlay can be used
+  const maxOverlayUsage2 = 16; // Maximum times the first two overlays combined can be used
+
+  images.forEach(image => {
+    let overlay; // Define the overlay variable based on the usage count
+    if (overlayUsageCount < maxOverlayUsage1) {
+      overlay = document.createElement('div');
+      overlay.classList.add('overlay');
+    } else if (overlayUsageCount < maxOverlayUsage2) {
+      overlay = document.createElement('div');
+      overlay.classList.add('overlay1');
+    } else {
+      overlay = document.createElement('div');
+      overlay.classList.add('overlay2');
+    }
+
+    // Create buttons
+    const youtubeButton = document.createElement('button');
+    youtubeButton.innerText = 'ტრეილერი';
+    youtubeButton.addEventListener('click', function () {
+      window.open('https://www.youtube.com', '_blank');
+    });
+
+    const moviesButton = document.createElement('button');
+    moviesButton.innerText = 'სრულად';
+    moviesButton.addEventListener('click', function () {
+      window.location.href = 'htmlholder/movie.html';
+    });
+
+    overlay.appendChild(youtubeButton);
+    overlay.appendChild(moviesButton);
+    image.parentNode.insertBefore(overlay, image.nextSibling);
+
+    // Show overlay when hovering over the image
+    image.addEventListener('mouseenter', function () {
+      overlay.classList.add('active');
+    });
+
+    // Hide overlay when leaving the image and not hovering over the buttons
+    image.addEventListener('mouseleave', function () {
+      setTimeout(() => {
+        if (!overlay.matches(':hover')) {
+          overlay.classList.remove('active');
+        }
+      }, 100);
+    });
+
+    // Prevent overlay from hiding when hovering over buttons
+    overlay.addEventListener('mouseenter', function () {
+      overlay.classList.add('active');
+    });
+
+    overlay.addEventListener('mouseleave', function () {
+      overlay.classList.remove('active');
+    });
+
+    // Add hover effects to buttons
+    const buttons = overlay.querySelectorAll('button');
+    buttons.forEach(button => {
+      button.addEventListener('mouseenter', function () {
+        button.style.borderColor = 'red'; // Highlight border when button is hovered
+      });
+      button.addEventListener('mouseleave', function () {
+        button.style.borderColor = '#ffffff54'; // Reset border when hover ends
+      });
+    });
+
+    overlayUsageCount++; // Increment the counter
+  });
+});
+
