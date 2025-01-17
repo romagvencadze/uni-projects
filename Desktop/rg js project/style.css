@@ -1,114 +1,292 @@
 html, body {
-    margin: 0;
-    padding: 0;
+   margin: 0;
+   padding: 0;
+   height: 100vh;
 }
 
+
+/* header */
 .header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    border: solid 1px red;
-    background-color: red;
-    height: 50px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    z-index: 10;
+   position: fixed;
+   top: 0;
+   left: 0;
+   border: solid 1px red;
+   background-color: red;
+   height: 50px;
+   width: 99.9%;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   align-items: center;
+   z-index: 10;
 }
 
 .menu span {
-    margin: 0 13px;
-    cursor: pointer;
-    color: white;
+   margin: 0 13px;
+   cursor: pointer;
+   color: white;
 }
 
 .menu-right {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    color: white;
+   display: flex;
+   align-items: center;
+   margin-left: auto;
+   color: white;
 }
 
 .menu-right span {
-    margin-right: 15px;
-    cursor: pointer;
+   margin-right: 15px;
+   cursor: pointer;
+}
+
+.but0 {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: larger;
 }
 
 .but1 {
-    margin-left: 10px;
-    padding: 5px 10px;
-    border: none;
-    background-color: white;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    border-radius: 5px;
+   margin-left: 10px;
+   padding: 5px 10px;
+   border: none;
+   background-color: white;
+   color: rgb(0, 0, 0);
+   cursor: pointer;
+   border-radius: 5px;
 }
 .but2 {
-    margin-left: 10px;
-    padding: 5px 10px;
-    border: none;
-    background-color: rgb(255, 0, 0);
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    border-radius: 5px;
+   margin-left: 10px;
+   padding: 5px 10px;
+   border: none;
+   background-color: rgb(255, 0, 0);
+   color: rgb(255, 255, 255);
+   cursor: pointer;
+   border-radius: 5px;
 }
 
 
 
 
 
-/* Slider container */
+
+/* Registration Modal Styles */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 25px;
+  padding-right: 40px;
+  border-radius: 10px;
+  width: 42%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+  color: #900;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+
+.form-group1 {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: 96%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.rulesbutton{
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 30px;
+  border: solid rgba(0, 0, 0, 0.381) 1px;
+  text-decoration: none;
+  width: 12%;
+  color: rgba(0, 0, 0, 0.544);
+}
+
+.submit-button   {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: darkred;
+}
+
+input[type="checkbox"] {
+margin-top: 40px;
+}
+
+
+
+
+
+
+/* Modal styles */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+
+
+
+
+
+
+button {
+  background-color: red;
+  color: white;
+  padding: 1px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* slider */
 .slider {
-    position: relative;
-    width:100%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    margin-top: 61px;
-  }
-  
-  /* Slide images */
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .slide {
-    min-width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .slide img {
-    width: 100%;
-    display: block;
-  }
-  
-  /* Dots */
+   position: relative;
+   width:100%;
+   max-width: 1200px;
+   margin: auto;
+   overflow: hidden;
+   margin-top: 61px;
+ }
+ 
+ 
+ .slides {
+   display: flex;
+   transition: transform 0.5s ease-in-out;
+ }
+ 
+ .slide {
+   min-width: 100%;
+   box-sizing: border-box;
+ }
+ 
+ .slide img {
+   width: 100%;
+   display: block;
+ }
+ 
+ 
 .dots {
-    position: absolute;
-    bottom: 15px; /* Adjust the distance from the bottom of the slider */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px; /* Spacing between dots */
-  }
-  
-  .dot {
-    display: inline-block;
-    width: 9px;
-    height: 9px;
-    background-color: rgba(255, 255, 255, 0);
-    border: solid 1px rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .dot.active {
-    background-color: rgb(255, 255, 255);
-  }
+   position: absolute;
+   bottom: 15px; 
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 10px; 
+ }
+ 
+ .dot {
+   display: inline-block;
+   width: 9px;
+   height: 9px;
+   background-color: rgba(255, 255, 255, 0);
+   border: solid 1px rgba(255, 255, 255, 0.8);
+   border-radius: 50%;
+   cursor: pointer;
+   transition: background-color 0.3s;
+ }
+ 
+ .dot.active {
+   background-color: rgb(255, 255, 255);
+ }
 
 
 
@@ -116,57 +294,62 @@ html, body {
 
 
 
-  .obtions {
-    width:100%;
-    height: 50px;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    margin-top: 15px;
-  }
 
-  .holder {
-    display: inline;
-    position: center;
-    width: 600px;
-    height: 50px;
-    border: solid 0px ;
-    margin: auto;
-    overflow: hidden;
-    margin-top: 15px;
-  }
 
-  .filmebi{
-     width: 582px;
-     height: 40px;
-     background-color: white;
-     border-radius: 10px;
-     border: solid 1px rgba(0, 0, 0, 0.219);
-     margin-right: 16px;
-     font-weight: bold;
-     font-size: large;
-  }
 
-  .seansebi{
+
+/* მთავარი გვერდის შემცვლელი ბათონი */
+ .obtions {
+   width:100%;
+   height: 50px;
+   max-width: 1200px;
+   margin: auto;
+   overflow: hidden;
+   margin-top: 15px;
+ }
+
+ .holder {
+   display: inline;
+   position: center;
+   width: 600px;
+   height: 50px;
+   border: solid 0px ;
+   margin: auto;
+   overflow: hidden;
+   margin-top: 15px;
+ }
+
+ .filmebi{
     width: 582px;
     height: 40px;
     background-color: white;
     border-radius: 10px;
     border: solid 1px rgba(0, 0, 0, 0.219);
-    margin-left: 16px;
+    margin-right: 16px;
     font-weight: bold;
     font-size: large;
-
  }
 
- .filmebi.active, .seansebi.active {
-   background-color: red;
-   color: white;
+ .seansebi{
+   width: 582px;
+   height: 40px;
+   background-color: white;
+   border-radius: 10px;
+   border: solid 1px rgba(0, 0, 0, 0.219);
+   margin-left: 16px;
+   font-weight: bold;
+   font-size: large;
+
+}
+
+.filmebi.active, .seansebi.active {
+  background-color: red;
+  color: white;
 }
 
 .filmebi.inactive, .seansebi.inactive {
-   background-color: white;
-   color: black;
+  background-color: white;
+  color: black;
 }
 
 
@@ -174,310 +357,612 @@ html, body {
 
 
 
- .archevani {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left; /* Centers the items horizontally */
-    margin-top: 20px; /* Add some space between the buttons and the archevani container */
-    width: 1200px;
-    margin-left: 135px;
-}
 
- .type1{
-    border: solid 0px;
-    width: 390px;
-    height: 300px;
-    background-color: rgb(232, 230, 230);
-    margin: 5px;
-    box-sizing: border-box;  /* Ensures padding is included in the total width/height */
-    position: relative;  /* Needed for absolute positioning inside this container */
-    display: flex;
-    flex-direction: column; /* Makes sure the content is stacked vertically */
 
- }
+/* გამოსული ფილმებს სია */
 
- .type2{
-    border: solid 0px;
-    width: 190px;
-    height: 310px;
-    background-color: rgb(232, 230, 230);
-    margin: 5px;
-    box-sizing: border-box;  /* Ensures padding is included in the total width/height */
-    position: relative;  /* Needed for absolute positioning inside this container */
-    display: flex;
-    flex-direction: column; /* Makes sure the content is stacked vertically */
-
- }
-
- .little_red_cont {
+.archevani {
+   margin: 0 auto;
    display: flex;
-   position: absolute;  /* Absolute positioning to place it on top of the .type2 */
-   bottom: 8px;  /* Aligns the red boxes to the bottom of the container */
-   left: 10px; /* Adjust this to change the left offset */
-}
-
-.little_red {
-   width: 30px;
-   height: 20px;
-   border: solid 0px black;
-   border-radius: 3px;
-   background-color: rgb(212, 4, 4);
-   margin: 2px;
-   color: white;
-   font-size: small;
-   text-align: center;
-}
-
-.saxeli{
-   margin-left: 12px;
-   white-space: nowrap;  /* Prevents text from wrapping to the next line */
-   overflow: hidden;     /* Hides overflowing content */
-   text-overflow: ellipsis; /* Adds ellipsis (…) to truncated content */
-   width: 88%;          /* Ensures the width respects the container size */
-   display: block;       /* Makes sure the element behaves like a block-level element */
-   font-size: 18px;      /* Optional: Adjust font size as needed */
-   line-height: 1.2;          /* Adjust line height to make text tighter */
-   position: relative;      /* Enable fine-tuned positioning */
-   top: -5px;               /* Move the text up by 5px (adjust as needed) */
-   color: black;
+   flex-wrap: wrap;
+   justify-content: left; 
+   margin-top: 20px; 
+   width: 1200px;
+  
 }
 
 
 
-
-
-.overlay {
-   position: absolute;
-   width: 370px;
-   height: 220px;
-   margin: 10px;
-   background-color: rgba(0, 0, 0, 0.74); /* Semi-transparent black */
-   display: none; /* Initially hidden */
-   justify-content: center;
-   align-items: center;
-   z-index: 1; /* Ensure it's above the image */
-   flex-direction: column; /* Stack buttons vertically */
+/* პოსტერის დიზაინები */
+.type1{
+   border: solid 0px;
+   width: 390px;
+   height: 300px;
+   background-color: rgb(232, 230, 230);
+   margin: 5px;
+   box-sizing: border-box;  
+   position: relative;  
+   display: flex;
+   flex-direction: column; 
+   size: fixed;
 }
 
-.overlay1    {
-   position: absolute;
-   width: 170px;
-   height: 230px;
-   margin: 10px;
-   background-color: rgba(0, 0, 0, 0.74); /* Semi-transparent black */
-   display: none; /* Initially hidden */
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   z-index: 1; /* Ensure it's above images */
-   flex-direction: column; /* Stack buttons vertically */
-}
-
-.overlay2    {
-   position: absolute;
-   width: 170px;
-   height: 250px;
-   margin: 10px;
-   background-color: rgba(0, 0, 0, 0.74);
-   display: none; 
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   z-index: 1; 
-   flex-direction: column; /* Stack buttons vertically */
-}
-.overlay.active , .overlay1.active , .overlay2.active  {
-   display: flex; /* Show overlay when active */
-}
-
-.overlay button , .overlay1 button , .overlay2 button  {
-   width: 80%;
-   height: 50px;
-   background-color: #000; /* Black background for buttons */
-   border: 2px solid #ffffff54; /* White border */
-   border-radius: 10px;
-   color: #ff0000; /* White text */
-   font-size: 18px;
-   font-weight: bold;
-   text-align: center;
-   cursor: pointer;
-   margin: 10px 0; /* Space between buttons */
-   transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-
-.overlay button:hover , .overlay1 button:hover , .overlay2 button:hover {
-   border-color: red; /* Turn border red on hover */
+.type2{
+   border: solid 0px;
+   width: 190px;
+   height: 310px;
+   background-color: rgb(232, 230, 230);
+   margin: 5px;
+   box-sizing: border-box;  
+   position: relative; 
+   display: flex;
+   flex-direction: column; 
+   size: fixed;
 }
 
 
 
 
-
-
-
-
-
-
- 
- hr{
-    width: 1150px;
-    color: rgba(232, 230, 230, 0.522);
- }
-
-
-
- 
-
-
- .male{
-    width:1200px;
-    height: 70px;
-    margin: auto;
-    overflow: hidden;
-    margin-top: 15px;
-    background-color: rgba(213, 213, 213, 0.522);
-    border-radius: 5px;
- }
-
- h2{
-    margin-bottom: 4px;
-    margin-left: 20px;
-    font-weight: 100;
- }
-
-
-
-
-
- .archevani2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left; /* Centers the items horizontally */
-    margin-top: 7px; /* Add some space between the buttons and the archevani container */
-    width: 1200px;
-    margin-left: 135px;
-}
-
-
+/* პოსტერზე დივების დიზაინები */
 .a{
-   width: 370px;
-   height: 220px;
-   margin: 10px;
+  width: 370px;
+  height: 220px;
+  margin: 10px;
 }
 
 .b{
-    width: 170px;
-    height: 230px;
-    margin: 10px;
- }
-
- .c{
-    width: 170px;
-    height: 250px;
-    margin: 10px;
- }
-
- h3{
-    margin-left: 12px;
-    padding-bottom: 20px;
-    font-weight: 200;
- }
-
-
-
-
-
- .footer{
-   top: 0;
-   left: 0;
-   border: solid 1px rgb(214, 4, 4);
-   background-color: rgb(214, 4, 4);
+   width: 170px;
    height: 230px;
-   width: 100%;
-   padding: 0;
-   margin-top: 30px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
+   margin: 10px;
+}
+
+.little_red_cont {
+  display: flex;
+  position: absolute;  
+  bottom: 8px; 
+  left: 10px; 
+}
+
+.little_red {
+  width: 30px;
+  height: 20px;
+  border: solid 0px black;
+  border-radius: 3px;
+  background-color: rgb(212, 4, 4);
+  margin: 2px;
+  color: white;
+  font-size: small;
+  text-align: center;
+}
+
+.saxeli{
+  margin-left: 12px;
+  white-space: nowrap;  
+  overflow: hidden;     
+  text-overflow: ellipsis; 
+  width: 88%;          
+  display: block;      
+  font-size: 18px;     
+  line-height: 1.2;          
+  position: relative;      
+  top: -5px;               
+  color: black;
 }
 
 
 
+
+
+
+/* პოსტერის ფოტოს ოვერლეი */
+.overlay {
+  position: absolute;
+  width: 370px;
+  height: 220px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.74); 
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  z-index: 1; 
+  flex-direction: column; 
+}
+
+.overlay1    {
+  position: absolute;
+  width: 170px;
+  height: 230px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.74); 
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1; 
+  flex-direction: column; 
+}
+
+.overlay2    {
+  position: absolute;
+  width: 170px;
+  height: 250px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.74);
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1; 
+  flex-direction: column; 
+}
+.overlay.active , .overlay1.active , .overlay2.active  {
+  display: flex; 
+}
+
+.overlay button , .overlay1 button , .overlay2 button  {
+  width: 80%;
+  height: 50px;
+  background-color: #000; 
+  border: 2px solid #ffffff54; 
+  border-radius: 10px;
+  color: #ff0000; 
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin: 10px 0; 
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.overlay button:hover , .overlay1 button:hover , .overlay2 button:hover {
+  border-color: red; 
+}
+
+
+
+
+
+
+
+
+
+/* ხაზი */
+hr{
+   width: 1150px;
+   color: rgba(232, 230, 230, 0.522);
+}
+
+
+
+
+
+
+
+/* საინფორმაციო ველი */
+.male{
+   width:1200px;
+   height: 70px;
+   margin: auto;
+   overflow: hidden;
+   margin-top: 15px;
+   background-color: rgba(213, 213, 213, 0.522);
+   border-radius: 5px;
+}
+
+h2{
+   margin-bottom: 4px;
+   margin-left: 20px;
+   font-weight: 100;
+}
+
+
+
+
+
+
+/* გამოსასვლელი დივების სია */
+.archevani2 {
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: left; 
+   margin-top: 7px; 
+   width: 1200px;
+   
+}
+
+.c{
+   width: 170px;
+   height: 250px;
+   margin: 10px;
+}
+
+h3{
+   margin-left: 12px;
+   padding-bottom: 20px;
+   font-weight: 200;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ფუტერი */
+.footer{
+  position: relative;
+  border: solid 1px rgb(214, 4, 4);
+  background-color: rgb(214, 4, 4);
+  height: 230px;
+  width: 99.9%;
+  padding: 0;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  right: 0;
+}
+
+
+
+/* ფუტერის მენიუს სპანები */
 .menu1 span {
-   margin: 0 20px;
-   cursor: pointer;
-   font-size: 16px;
-   font-weight: 500;
-   text-transform: uppercase;
-   letter-spacing: 1px;
-   color: white;
-   position: relative; /* Needed for the pseudo-element */
-   padding-bottom: 5px; /* Space for the line effect */
+  margin: 0 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  position: relative; 
+  padding-bottom: 5px; 
 }
 
 .menu1 span:hover::after {
-   content: '';
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 100%;
-   height: 2px; /* Thickness of the line */
-   background-color: white;
-   transition: width 0.3s ease; /* Optional smooth animation */
-   width: 100%; /* Line covers the full width */
-}
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; 
+  background-color: white;
+  transition: width 0.3s ease; 
+  width: 100%; 
+} 
 
-/* Social Media Section */
+
+
+
+/* სოციალური მედიის ლინკები */
 .social-networks {
-   display: flex;
-   justify-content: center;
-   gap: 20px;
-   margin-bottom: 30px;
-   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .social-networks a {
-   color: white;
-   font-size: 24px;
-   width: 40px;
-   height: 40px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-   border-radius: 5px; /* Slightly rounded corners */
-   text-decoration: none;
-   transition: transform 0.3s ease, background-color 0.3s ease;
+  color: white;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2); 
+  border-radius: 5px; 
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .social-networks a img {
-   width: 120%; /* Make the image fill the parent element */
-   height: 120%; /* Ensure the image takes the full height */
-   object-fit: cover; /* Keeps the aspect ratio of the image */
+  width: 120%; 
+  height: 120%; 
+  object-fit: cover; 
 }
 
 .social-networks a:hover {
-   transform: scale(1.1);
-   background-color: white; /* Change background to white on hover */
-   color: rgb(214, 4, 4); /* Change icon color to red */
+  transform: scale(1.1);
+  background-color: white; 
+  color: rgb(214, 4, 4); 
 }
 
-/* Footer Text */
+
+
+/* კინოაფიშას ლინკი */
 .footer p {
-   font-size: 14px;
-   margin-top: 10px;
-   text-align: center;
-   color: white;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
 }
 
 .a1{
-   color: white;
-   font-size: 200;
+  color: white;
+  font-size: 200;
 }
 
 a{
-   text-decoration: none;
+  text-decoration: none;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  .archevani, .archevani2 {
+      width: 100%;
+  }
+  .type1, .type2 {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  hr{
+     width: 90%;
+     color: rgba(232, 230, 230, 0.522);
+  }
+
+  .male{
+     width: 90%;
+     height: 70px;
+     margin: auto;
+     overflow: hidden;
+     margin-top: 15px;
+     background-color: rgba(213, 213, 213, 0.522);
+     border-radius: 5px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .header {
+      height: 60px;
+  }
+  .filmebi, .seansebi {
+      width: 100%;
+      margin: 10px 0;
+  }
+  .archevani, .archevani2 {
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+  }
+  .type1, .type2 {
+      width: 100%;
+  }
+  .footer {
+      height: 150px;
+  }
+
+  hr{
+     width: 90%;
+     color: rgba(232, 230, 230, 0.522);
+  }
+
+  .male{
+     width: 90%;
+     height: 70px;
+     margin: auto;
+     overflow: hidden;
+     margin-top: 15px;
+     background-color: rgba(213, 213, 213, 0.522);
+     border-radius: 5px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+  .header {
+      height: 50px;
+  }
+  .filmebi, .seansebi {
+      width: 100%;
+      font-size: medium;
+  }
+  .archevani, .archevani2 {
+      flex-direction: column;
+      justify-content: center;
+  }
+  .footer {
+      height: 120px;
+  }
+
+  hr{
+     width: 90%;
+     color: rgba(232, 230, 230, 0.522);
+  }
+
+  .male{
+     width: 90%;
+     height: 70px;
+     margin: auto;
+     overflow: hidden;
+     margin-top: 15px;
+     background-color: rgba(213, 213, 213, 0.522);
+     border-radius: 5px;
+  }
+
+}
+
+
+
+
+/* Hide the menu by default on screens smaller than 1000px */
+@media (max-width: 1000px) {
+  .menu {
+      display: none;
+  }
+
+  /* Hamburger menu icon */
+  .hamburger {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      z-index: 11;
+  }
+
+  /* Lines of the hamburger icon */
+  .hamburger span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px 0;
+      background-color: white;
+      transition: 0.3s;
+  }
+
+  /* Toggle the menu visibility when the hamburger is clicked */
+  .hamburger.active + .menu {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      background-color: red;
+  }
+
+  .menu span {
+      color: white;
+      margin: 10px 0;
+      padding: 10px;
+      cursor: pointer;
+      text-align: center;
+  }
+
+  /* Optional: Change the appearance of the hamburger when active */
+  .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg);
+      position: relative;
+      top: 8px;
+  }
+
+  .hamburger.active span:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg);
+      position: relative;
+      top: -8px;
+  }
+}
+
+
+
+/* Ensure the burger icon is hidden by default on larger screens */
+.hamburger {
+  display: none;
+}
+
+/* Show the hamburger on mobile screens */
+@media (max-width: 1000px) {
+  .hamburger {
+      display: block;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+
+  .type2{
+     display: flex;
+     align-items: center;
+  }
+}
+
+
+
+@media (max-width: 860px) {
+  .footer {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      bottom: 0;
+      height: 230px;
+      width: 99.9%;
+  }
+
+  .footer-links, .footer-social, .footer-rights {
+      width: 100%;
+      text-align: center; /* Align text to the center */
+  }
+
+  .footer-links {
+      margin-bottom: 10px;
+  }
+
+  .footer-social {
+      margin-bottom: 10px;
+  }
+}

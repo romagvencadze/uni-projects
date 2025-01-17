@@ -183,3 +183,210 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+
+document.querySelector('.hamburger').addEventListener('click', function() {
+  this.classList.toggle('active');
+  document.querySelector('.menu').classList.toggle('active');
+});
+
+
+
+
+
+
+let currentLang
+document.addEventListener("DOMContentLoaded", () => {
+    currentLang = "ge"
+});
+
+function changeLanguage() {
+    fetch('translator.json').then((resp) => {
+        return resp.json()
+    }).then((data) => {
+        switch (currentLang) {
+            case "ge":
+                const enKeys = Object.entries(data.en)
+                for (let i = 0; i < enKeys.length; i++) {
+                    try {
+                        let element = document.getElementById(enKeys[i][0])
+
+                        element.textContent = enKeys[i][1]
+                    } catch (Exception) {
+                        let elements = document.getElementsByClassName(enKeys[i][0])
+                        for (let j = 0; j < elements.length; j++) {
+                            elements[j].textContent = enKeys[i][1];
+                        }
+                    }
+
+                }
+                currentLang = "en"
+                break
+            case "en":
+                const kaKeys = Object.entries(data.ge)
+                for (let i = 0; i < kaKeys.length; i++) {
+                    try {
+                        let element = document.getElementById(kaKeys[i][0])
+
+                        element.textContent = kaKeys[i][1]
+                    } catch (Exception) {
+                        let elements = document.getElementsByClassName(kaKeys[i][0])
+                        for (let j = 0; j < elements.length; j++) {
+                            elements[j].textContent = kaKeys[i][1];
+                        }
+                    }
+                }
+                currentLang = "ge"
+                break
+        }
+    })
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('registrationModal'); // Modal element
+  const openModalButton = document.querySelector('.but2'); // Button to open modal
+  const closeModal = document.querySelector('.close'); // Close button in modal
+
+  // Open modal when the button with class "but2" is clicked
+  openModalButton.addEventListener('click', () => {
+    modal.style.display = 'block';
+  });
+
+  // Close modal when the "close" button is clicked
+  closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Close modal if user clicks outside of the modal content
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  // Handle form submission with validation
+  const registrationForm = document.getElementById('registrationForm');
+  registrationForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    // Get form inputs
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    // Validate inputs
+    if (!firstName || !lastName || !email || !phone || !password || !confirmPassword) {
+      alert('All fields are required.');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    if (!validatePhone(phone)) {
+      alert('Phone number must start with "5" and be exactly 9 digits long.');
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert('Passwords do not match.');
+      return;
+    }
+
+    if (password.length < 6) {
+      alert('Password must be at least 6 characters long.');
+      return;
+    }
+
+    // If all validations pass, show success message and close modal
+    alert('Registration successful!');
+    modal.style.display = 'none'; // Close the modal on successful submission
+  });
+
+  // Helper function to validate email format
+  function validateEmail(email) {
+    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return re.test(email);
+  }
+
+  // Helper function to validate phone number format
+  function validatePhone(phone) {
+    const re = /^5\d{8}$/;
+    return re.test(phone);
+  }
+});
+
+
+
+
+
+
+
+
+// Get elements
+const loginModal = document.getElementById('loginModal');
+const shesvlaButton = document.getElementById('shesvla');
+const closeButton = document.getElementById('closeModal');
+const registerButton = document.getElementById('openRegister');
+const forgotPasswordLink = document.getElementById('forgotPassword');
+
+// Show the modal when the 'შესვლა' button is clicked
+shesvlaButton.addEventListener('click', () => {
+  loginModal.style.display = 'block';
+});
+
+// Hide the modal when the close button is clicked
+closeButton.addEventListener('click', () => {
+  loginModal.style.display = 'none';
+});
+
+// Hide the modal when clicking outside the modal content
+window.addEventListener('click', (event) => {
+  if (event.target === loginModal) {
+    loginModal.style.display = 'none';
+  }
+});
+
+// Redirect to the registration page when 'რეგისტრაცია' button is clicked
+registerButton.addEventListener('click', () => {
+  window.location.href = 'registration-page-url';  // Replace with your actual registration page URL
+});
+
+// Handle the 'პაროლის აღდგენას' link click
+forgotPasswordLink.addEventListener('click', (event) => {
+  event.preventDefault(); // Prevent default link behavior
+  alert('Open the password recovery process here.');
+  loginModal.style.display = 'none';
+});
+
+
+registerButton.addEventListener('click', () => {
+  window.location.href = '/register';  // Example URL for the registration page
+});

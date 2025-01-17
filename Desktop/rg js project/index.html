@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <div class="header">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="menu">
-            <a href="index.html"><span>მთავარი</span></a>
-            <a href="htmlholder/filmebi.html"><span>ფილმები</span></a> 
-            <a href="htmlholder/sessions.html"><span>ENG SESSIONS</span></a>
-            <a href="htmlholder/event-cinema.html"><span>EVENT CINEMA</span></a>
-            <a href="htmlholder/collections.html"><span>შეგროვებები</span></a> 
-            <a href="htmlholder/contact.html"><span>კონტაქტი</span></a> 
-            <a href="htmlholder/posters.html"><span>პლაკატები</span></a> 
-            <a href="htmlholder/rules.html"><span>წესები</span></a> 
+            <a href="index.html"><span  id = "mtavari">მთავარი</span></a>
+            <a href="movie.html"><span  id = "filmebi">ფილმები</span></a> 
+            <a href="restrictions.html"><span>ENG SESSIONS</span></a>
+            <a href="restrictions.html"><span  id = "shezgudvebi">შეზღუდვები</span></a> 
+            <a href="rules.html"><span  id = "kontaqti">კონტაქტი</span></a> 
+            <a href="rules.html"><span  id = "aplikacia">აპლიკაცია</span></a> 
+            <a href="rules.html"><span  id = "wesebi">წესები</span></a> 
         </div>
         <div class="menu-right">
-            <span>ENG</span>
-            <button class="but1">შესვლა</button>
-            <button class="but2">რეგისტრაცია</button>
+            <button class="but0" onclick="changeLanguage()" id = "eng">ENG</button> 
+            <button href="login.html" class="but1" id = "shesvla">შესვლა</button>
+            <button class="but2" id = "registracia">რეგისტრაცია</button>
         </div>
+
     </div>
 
     <!-- Overlay Div -->
@@ -33,18 +38,18 @@
 
     <div class="slider">
         <div class="slides">
-          <div class="slide"><img src="sliderimg1.jpg" alt="Image 1"></div>
-          <div class="slide"><img src="sliderimg2.jpg" alt="Image 2"></div>
-          <div class="slide"><img src="sliderimg3.jpg" alt="Image 3"></div>
-          <div class="slide"><img src="sliderimg4.jpg" alt="Image 4"></div>
-          <div class="slide"><img src="sliderimg5.png" alt="Image 5"></div>
+          <div class="slide"><img src="imgs/sliderimg1.jpg" alt="Image 1"></div>
+          <div class="slide"><img src="imgs/sliderimg2.jpg" alt="Image 2"></div>
+          <div class="slide"><img src="imgs/sliderimg3.jpg" alt="Image 3"></div>
+          <div class="slide"><img src="imgs/sliderimg4.jpg" alt="Image 4"></div>
+          <div class="slide"><img src="imgs/sliderimg5.png" alt="Image 5"></div>
         </div>
         <div class="dots"></div>
     </div>
 
     <div class="obtions">
-        <div class="holder"> <button class="filmebi"> ფილმები </button> </div>
-        <div class="holder"> <button class="seansebi"> სეანსები</button> </div>
+        <div class="holder"> <button class="filmebi" id = "obtionsfilmebi"> ფილმები </button> </div>
+        <div class="holder"> <button class="seansebi" id = "seansebi"> სეანსები</button> </div>
     </div>
 
     <div class="content-wrapper">
@@ -53,7 +58,7 @@
         
         <div class="archevani">
             <div class="type1"><img class="a" src="imgs/list1img1.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">მძარცველებზე ნადირობა 2</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli1">მძარცველებზე ნადირობა 2</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -62,7 +67,7 @@
             </div>
 
             <div class="type1"><img class="a" src="imgs/list1img2.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">პადინგტონი 3</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli2">პადინგტონი 3</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -71,7 +76,7 @@
             </div>
 
             <div class="type1"><img class="a" src="imgs/list1img3.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">ზღარბი სონიკი 3</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli3">ზღარბი სონიკი 3</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -80,7 +85,7 @@
             </div>
 
             <div class="type1"><img class="a" src="imgs/list1img4.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">მუფასა: მეფე ლომი</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli4">მუფასა: მეფე ლომი</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -89,7 +94,7 @@
             </div>
             
             <div class="type1"><img class="a" src="imgs/list1img5.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">მოანა 2</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli5">მოანა 2</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -98,7 +103,7 @@
             </div>
             
             <div class="type1"><img class="a" src="imgs/list1img6.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">სუპერ მამიკოები</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli6">სუპერ მამიკოები</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -107,7 +112,7 @@
             </div>
             
             <div class="type1"><img class="a" src="imgs/list1img7.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">ნოსფერატუ</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli7">ნოსფერატუ</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -116,7 +121,7 @@
             </div>
             
             <div class="type2"><img class="b" src="imgs/list2img1.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">ალქაჯი: ზღაპარი ჯადოქარზე</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli8">ალქაჯი: ზღაპარი ჯადოქარზე</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -125,7 +130,7 @@
             </div>
             
             <div class="type2"><img class="b" src="imgs/list2img2.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">მონადირე კრეივენი</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli9">მონადირე კრეივენი</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -134,7 +139,7 @@
             </div>
             
             <div class="type2"><img class="b" src="imgs/list2img3.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">რობი უილიამსი: Better Man</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli10">რობი უილიამსი: Better Man</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -143,7 +148,7 @@
             </div>
             
             <div class="type2"><img class="b" src="imgs/list2img4.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">Baekhyun: Lonsdaleite</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli11">Baekhyun: Lonsdaleite</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -152,7 +157,7 @@
             </div>
             
             <div class="type2"><img class="b" src="imgs/list2img5.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">მარია კალასი</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli12">მარია კალასი</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -161,7 +166,7 @@
             </div>
             
             <div class="type2"><img class="b" src="imgs/list2img6.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">პაპის კონკლავი</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli13">პაპის კონკლავი</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -170,7 +175,7 @@
             </div>
             
             <div class="type2"><img class="b" src="imgs/list2img7.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">გლადიატორი II</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli14">გლადიატორი II</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -179,7 +184,7 @@
             </div>
             
             <div class="type2"><img class="b" src="imgs/list2img8.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">ოთახი მეზობლად</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli15">ოთახი მეზობლად</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -188,7 +193,7 @@
             </div>
             
             <div class="type2"><img class="b" src="imgs/list2img9.jpg" alt="">
-            <a href="htmlholder/movie.html"><div class="saxeli">მისია წითელი</div></a>
+            <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli16">მისია წითელი</div></a>
             <div class="little_red_cont">
                 <a href="htmlholder/rules.html"><div class="little_red">PG</div></a>
                 <a href="htmlholder/rules.html"><div class="little_red">GEO</div></a>
@@ -200,39 +205,39 @@
 
         <hr>
 
-        <div class="male"><h2> იხილეთ მალე ... </h2></div>
+        <div class="male"><h2 id = "ixilet male"> იხილეთ მალე ... </h2></div>
 
         <div class="archevani2">
             <div class="type2"><img class="c" src="imgs/list3img1.jpg" alt="">
-                <a href="htmlholder/movie.html"><div class="saxeli">ჩვენი აქ ცხოვრების წლები</div></a>
+                <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli17">ჩვენი აქ ცხოვრების წლები</div></a>
             </div>
             
             <div class="type2"><img class="c" src="imgs/list3img2.jpg" alt="">
-                <a href="htmlholder/movie.html"><div class="saxeli">მაქცია: Wolf Man</div></a>
+                <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli18">მაქცია: Wolf Man</div></a>
             </div>
             
             <div class="type2"><img class="c" src="imgs/list3img3.jpg" alt="">
-                <a href="htmlholder/movie.html"><div class="saxeli">ბობ დილანი: ყველასთვის უცნობი</div></a>
+                <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli19">ბობ დილანი: ყველასთვის უცნობი</div></a>
             </div>
             
             <div class="type2"><img class="c" src="imgs/list3img4.jpg" alt="">
-                <a href="htmlholder/movie.html"><div class="saxeli">Panda Plan</div></a>
+                <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli20">Panda Plan</div></a>
             </div>
             
             <div class="type2"><img class="c" src="imgs/list3img5.jpg" alt="">
-                <a href="htmlholder/movie.html"><div class="saxeli">Dog Man</div></a>
+                <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli21">Dog Man</div></a>
             </div>
             
             <div class="type2"><img class="c" src="imgs/list3img6.jpg" alt="">
-                <a href="htmlholder/movie.html"><div class="saxeli">Companion</div></a>
+                <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli22">Companion</div></a>
             </div>
             
             <div class="type2"><img class="c" src="imgs/list3img7.jpg" alt="">
-                <a href="htmlholder/movie.html"><div class="saxeli">არასწორი ფსიქოლოგი</div></a>
+                <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli23">არასწორი ფსიქოლოგი</div></a>
             </div>
             
             <div class="type2"><img class="c" src="imgs/list3img8.jpg" alt="">
-                <a href="htmlholder/movie.html"><div class="saxeli">Baekhyun: Lonsdaleite</div></a>
+                <a href="htmlholder/movie.html"><div class="saxeli" id = "saxeli24">Baekhyun: Lonsdaleite</div></a>
             </div>
             
         </div>
@@ -245,14 +250,13 @@
 
     <div class="footer">
         <div class="menu1">
-            <a href="index.html"><span>მთავარი</span></a> 
-            <a href="htmlholder/filmebi.html"><span>ფილმები</span></a> 
-            <a href="htmlholder/sessions.html"><span>ENG SESSIONS</span></a> 
-            <a href="htmlholder/event-cinema.html"><span>EVENT CINEMA</span></a> 
-            <a href="htmlholder/collections.html"><span>შეგროვებები</span></a>
-            <a href="htmlholder/contact.html"><span>კონტაქტი</span></a> 
-            <a href="htmlholder/posters.html"><span>პლაკატები</span></a> 
-            <a href="htmlholder/rules.html"><span>წესები</span></a>
+            <a href="index.html"><span id = "mtavari1">მთავარი</span></a>
+            <a href="movie.html"><span id = "filmebi1">ფილმები</span></a> 
+            <a href="restrictions.html"><span id = "">ENG SESSIONS</span></a>
+            <a href="restrictions.html"><span id = "shezgudvebi1">შეზღუდვები</span></a> 
+            <a href="rules.html"><span id = "kontaqti1">კონტაქტი</span></a> 
+            <a href="rules.html"><span id = "aplikacia1">აპლიკაცია</span></a> 
+            <a href="rules.html"><span id = "wesebi1">წესები</span></a>  
         </div>
 
         <div class="social-networks">
@@ -270,6 +274,60 @@
         <span><a class="a1" href="https://www.kinoafisha.ge">Kinoafisha.ge</a> © 2015-2023</span>
     </div>
 
+
+<!-- Registration Modal -->
+<div id="registrationModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>რეგისტრაცია</h2>
+      <form id="registrationForm">
+        <div class="form-group1">
+          <input type="text" id="firstName" name="firstName" placeholder="სახელი" required>
+          <input type="text" id="lastName" name="lastName" placeholder="გვარი" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone" name="phone" placeholder="მობილური" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="ელ. ფოსტა" required>
+        </div>
+        <div class="form-group1">
+          <input type="password" id="password" name="password" placeholder="პაროლი" required>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="პაროლის დადასტურება" required>
+        </div>
+
+        <a href="rules.html" class="rulesbutton">პირობები</a>
+
+        <div class="form-group2">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">ვეთანხმები მოხმარების წესებს</label>
+        </div>
+        <button type="submit" class="submit-button">რეგისტრაცია</button>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>ავტორიზაცია</h2>
+      <form>
+        <div class="form-group">
+          <label for="email">ელ. ფოსტა</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">პაროლი</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="login-button">შესვლა</button>
+        <button type="button" class="register-button" id="openRegister">რეგისტრაცია</button>
+      </form>
+      <a href="#" class="forgot-password-link" id="forgotPassword">პაროლის აღდგენა</a>
+    </div>
+  </div>
+  
     <script src="script.js"></script>
 </body>
 </html>
